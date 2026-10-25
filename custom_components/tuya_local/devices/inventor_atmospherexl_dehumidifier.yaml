@@ -8,12 +8,9 @@ entities:
     class: dehumidifier
     translation_only_key: extended
     dps:
-      - id: 110
-        type: string
-        name: switch
       - id: 1
-        name: available
         type: boolean
+        name: switch
       - id: 3
         type: string
         name: humidity
@@ -109,6 +106,15 @@ entities:
         type: integer
         name: sensor
         unit: C
+        class: measurement
+  - entity: sensor
+    class: humidity
+    name: Room humidity
+    dps:
+      - id: 6
+        type: integer
+        name: sensor
+        unit: "%"
         class: measurement
   - entity: switch
     category: config
